@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-</RelativeLayout>
+    android:layout_height="match_parent"
+	android:orientation="vertical"
+	>
+	<EditText
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:id="@+id/Username_zone"
+		android:hint="Username"
+	/>
+	<EditText
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/Password_zone"
+		android:hint="Password"
+		android:inputType="textPassword"
+		
+	/>
+	<Button
+		android:text="Log in"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/Login_button"
+		android:clickable="@bool/abc_action_bar_embed_tabs"
+	/>
+
+</LinearLayout>
