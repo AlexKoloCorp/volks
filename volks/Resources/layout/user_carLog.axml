@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:minWidth="25px"
+	android:minHeight="25px">
+	<RelativeLayout
+		android:minHeight="25px"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/User_Car_log_top_bar"
+		android:background="@color/carlog_back"
+		>
+		<ImageView
+			android:src="@drawable/CorLogIco"
+			android:layout_width="70dp"
+			android:layout_height="30dp"
+			android:id="@+id/Carlog_logo"/>
+	</RelativeLayout>
+		<RelativeLayout
+			android:minHeight="25px"
+			android:layout_width="match_parent"
+			android:layout_height="100dp"
+			android:id="@+id/User_image_bar"
+			android:background="@color/carlog_back"
+			android:layout_below="@id/User_Car_log_top_bar"
+			>
+			
+			
+			<RelativeLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:id="@+id/User_avatar_layout">
+
+					<ImageView
+					android:src="@drawable/WolfAvatar"
+					android:layout_width="80dp"
+					android:layout_height="80dp"
+					android:scaleType="centerCrop"
+					android:layout_centerVertical="true"
+					android:id="@+id/User_Avatar_Image"
+					android:layout_marginLeft="15dp"			
+					android:clickable="true" />
+					<TextView
+					android:text="User Info"
+					android:textColor="#C4C4C4"
+					android:textSize="15sp"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:id="@+id/User_name_info"										
+					android:layout_toEndOf="@id/User_Avatar_Image"
+					android:layout_marginLeft="15dp"
+					android:layout_centerVertical="true"
+					/>
+					<TextView
+					android:text="User nickname"
+					android:textColor="#C4C4C4"
+					android:textSize="8sp"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:id="@+id/User_nickname"
+					android:layout_toEndOf="@id/User_Avatar_Image"
+					android:layout_marginLeft="15dp"
+					android:layout_below="@id/User_name_info"
+					android:layout_marginTop="1dp"
+					/>		
+			</RelativeLayout>
+			
+		</RelativeLayout>
+		<TableLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:id="@+id/Info_switch"
+		>
+			<TableRow
+				android:id="@+id/Info_Switcher_Row"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:background="@color/carlog_back"
+				android:padding="10dp"
+				>
+				<TextView
+					android:id="@+id/Car_Info"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:gravity="center"
+					android:text="MY CAR"				
+					/>
+				<TextView
+					android:id="@+id/Car_Log_User_Info"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:gravity="center"
+					android:text="INFO"
+					/>
+			</TableRow>		
+		</TableLayout>
+		<RelativeLayout
+			android:layout_width="match_parent"			
+			android:layout_height="200dp"
+			android:id="@+id/Car_Img_Layout"
+			android:layout_marginTop="20dp">
+			<ImageView
+				android:src="@drawable/ArteonWhite"
+				android:layout_width="match_parent"				
+				android:layout_height="match_parent"
+				android:scaleType="centerCrop"
+				android:id="@+id/User_Car_Image"
+				/>
+		</RelativeLayout>
+		<RelativeLayout
+			android:layout_width="match_parent"			
+			android:layout_height="match_parent"
+			android:id="@+id/Car_Info_List_Container"
+			android:layout_marginTop="20dp"
+			android:background="@color/carlog_back">
+			<ListView
+				android:layout_width="match_parent"			
+				android:layout_height="match_parent"
+				android:id="@+id/Car_Info_List"
+			/>
+		</RelativeLayout>
+</LinearLayout>
