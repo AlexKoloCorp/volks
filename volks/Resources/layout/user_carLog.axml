@@ -6,26 +6,12 @@
 	android:layout_height="match_parent"
 	android:minWidth="25px"
 	android:minHeight="25px">
-	<RelativeLayout
-		android:minHeight="25px"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:id="@+id/User_Car_log_top_bar"
-		android:background="@color/carlog_back"
-		>
-		<ImageView
-			android:src="@drawable/CorLogIco"
-			android:layout_width="70dp"
-			android:layout_height="30dp"
-			android:id="@+id/Carlog_logo"/>
-	</RelativeLayout>
 		<RelativeLayout
 			android:minHeight="25px"
 			android:layout_width="match_parent"
 			android:layout_height="100dp"
 			android:id="@+id/User_image_bar"
 			android:background="@color/carlog_back"
-			android:layout_below="@id/User_Car_log_top_bar"
 			>
 			
 			
