@@ -35,6 +35,11 @@
     <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
     <AndroidLinkMode>None</AndroidLinkMode>
     <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <BundleAssemblies>false</BundleAssemblies>
+    <Debugger>Native</Debugger>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -58,6 +63,7 @@
   <ItemGroup>
     <Compile Include="model\MyActionBarDrawerToggle.cs" />
     <Compile Include="volksActivities\Configurator_Activity.cs" />
+    <Compile Include="volksActivities\ForgotPass.cs" />
     <Compile Include="volksActivities\NewsActivity.cs" />
     <Compile Include="volksActivities\UserCarLog.cs" />
     <Compile Include="MainActivity.cs" />
@@ -68,6 +74,7 @@
     <Compile Include="model\User.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="google-services.json" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
@@ -105,6 +112,9 @@
     </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat">
       <Version>27.0.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.Auth">
+      <Version>60.1142.1</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -149,6 +159,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\configurator_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\listWords_layout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

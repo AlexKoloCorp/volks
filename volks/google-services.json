@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "483659150895",
+    "firebase_url": "https://volkswagen-acf75.firebaseio.com",
+    "project_id": "volkswagen-acf75",
+    "storage_bucket": "volkswagen-acf75.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:483659150895:android:26fb0ce4899d33a115f8da",
+        "android_client_info": {
+          "package_name": "volks.volks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "483659150895-sfk1d38163e113jaufecj54qoi25ri9e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "volks.volks",
+            "certificate_hash": "200c4aaf338d54dbfb1fe8e4d22842afe8fdd679"
+          }
+        },
+        {
+          "client_id": "483659150895-v8eat0p4g0t49alai77e5ujln43o90fo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSdWggkeyxjQxstcABdc90_hQlV_uVWr0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "483659150895-v8eat0p4g0t49alai77e5ujln43o90fo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

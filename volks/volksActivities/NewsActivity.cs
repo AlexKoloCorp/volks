@@ -38,7 +38,7 @@ namespace volks.volksActivities
             leftDataSet.Add("configurator");
             leftArrayAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, leftDataSet);
             myLeftDrawer.Adapter = leftArrayAdapter;
-
+            
             myLeftDrawer.ItemClick += MyLeftDrawer_ItemClick;
 
             myDrawerToggle = new MyActionBarDrawerToggle(
@@ -66,8 +66,7 @@ namespace volks.volksActivities
                     StartActivity(UserCabinet);
                     break;
                 case 1:
-                    Intent NewsFeed = new Intent(this, typeof(NewsActivity));
-                    StartActivity(NewsFeed);
+                    Toast.MakeText(this, "This page is already start", ToastLength.Short).Show();                    
                     break;
                 case 2:
                     Intent MyConfigurator = new Intent(this, typeof(Configurator_Activity));
