@@ -38,8 +38,9 @@
     <AotAssemblies>false</AotAssemblies>
     <EnableLLVM>false</EnableLLVM>
     <BundleAssemblies>false</BundleAssemblies>
-    <Debugger>Native</Debugger>
+    <Debugger>Xamarin</Debugger>
     <PlatformTarget>AnyCPU</PlatformTarget>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -65,6 +66,7 @@
     <Compile Include="volksActivities\Configurator_Activity.cs" />
     <Compile Include="volksActivities\ForgotPass.cs" />
     <Compile Include="volksActivities\NewsActivity.cs" />
+    <Compile Include="volksActivities\SignUp.cs" />
     <Compile Include="volksActivities\UserCarLog.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="model\Constants.cs" />
@@ -164,6 +166,16 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\listWords_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\signUp_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\forgotPass_layout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

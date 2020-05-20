@@ -7,14 +7,15 @@ using Android.Content;
 using volks.volksActivities;
 using Firebase.Auth;
 using Firebase;
+using Android.Gms.Tasks;
 
 namespace volks
 {
     [Activity(Label = "@string/app_name", Theme = "@style/AppTheme.NoActionBar", MainLauncher = true)]
-    public class MainActivity : AppCompatActivity
+    public class MainActivity : AppCompatActivity,IOnCompleteListener
     {
         private EditText username, password;      
-        private Button btn_logIn, btn_go_to_carLog, btn_news, btn_sigIn;
+        private Button btn_logIn, btn_sigIn;
         private TextView forgot_pass;
         private LinearLayout activity_main;
 
@@ -41,13 +42,7 @@ namespace volks
             forgot_pass = FindViewById<TextView>(Resource.Id.Forgot_Pass);
             forgot_pass.Click += Forgot_pass_Click;
 
-            activity_main = FindViewById<LinearLayout>(Resource.Id.activity_main);
-
-
-            //Timeles button
-            btn_news = FindViewById<Button>(Resource.Id.Temp);
-            btn_news.Click += Btn_news_Click;
-            //
+            activity_main = FindViewById<LinearLayout>(Resource.Id.activity_main);          
 
             //init firebase
             InitFirebaseAuth();
@@ -61,7 +56,7 @@ namespace volks
 
         private void Btn_sigIn_Click(object sender, EventArgs e)
         {
-            Intent NextActivity = new Intent(this, typeof(UserCarLog));
+            Intent NextActivity = new Intent(this, typeof(SignUp));
             StartActivity(NextActivity);
         }
 
@@ -75,14 +70,7 @@ namespace volks
                 app = FirebaseApp.InitializeApp(this, options);
             auth = FirebaseAuth.GetInstance(app);
 
-        }
-
-        private void Btn_news_Click(object sender, EventArgs e)
-        {
-            Intent NextActivity = new Intent(this, typeof(NewsActivity));
-            StartActivity(NextActivity);
-        }
-       
+        }  
 
         private void Button_Click(object sender, System.EventArgs e)
         {
@@ -90,13 +78,32 @@ namespace volks
             //string pswd = password.Text.ToString();
             User user = new User(username.Text.ToString(), password.Text.ToString());
             if (user.CheckInfo())
-            {
-                Toast.MakeText(this,"logined",ToastLength.Short).Show();
+            {               
+                LoginUser(username.Text, password.Text);
             }
             else {
                 Toast.MakeText(this, "you didn't fill all fields", ToastLength.Short).Show();
             }
             //throw new System.NotImplementedException();
-        }    
+        }
+
+        private void LoginUser(string username, string password)
+        {
+            auth.SignInWithEmailAndPassword(username, password)
+                .AddOnCompleteListener(this);
+        }
+
+        public void OnComplete(Task task)
+        {
+            if (task.IsSuccessful)
+            {
+                StartActivity(new Android.Content.Intent(this, typeof(NewsActivity)));
+                Finish();
+            }
+            else
+            {
+                Toast.MakeText(this, "Login failed", ToastLength.Short).Show();
+            }
+        }
     }
 }

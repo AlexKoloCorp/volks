@@ -7,6 +7,7 @@ using Android.Support.V4.Widget;
 using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
+using Firebase.Auth;
 using System.Collections.Generic;
 using volks.model;
 using SupportToolbar = Android.Support.V7.Widget.Toolbar;
@@ -14,7 +15,7 @@ using SupportToolbar = Android.Support.V7.Widget.Toolbar;
 namespace volks.volksActivities
 {
     [Activity(Label = "NewsActivity", Theme = "@style/AppTheme.NoActionBar")]
-    public class NewsActivity : AppCompatActivity 
+    public class NewsActivity : AppCompatActivity
     {
         private SupportToolbar myToolBar;
         private MyActionBarDrawerToggle myDrawerToggle;
@@ -23,6 +24,7 @@ namespace volks.volksActivities
         private ArrayAdapter leftArrayAdapter;
         private List<string> leftDataSet;
 
+        FirebaseAuth auth;
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -32,15 +34,17 @@ namespace volks.volksActivities
             myToolBar = FindViewById<SupportToolbar>(Resource.Id.toolBar);
             SetSupportActionBar(myToolBar);
 
+            //init Firebase
+            auth = FirebaseAuth.GetInstance(MainActivity.app);
+
             leftDataSet = new List<string>();
             leftDataSet.Add("my cabinet");
             leftDataSet.Add("news");
             leftDataSet.Add("configurator");
+            leftDataSet.Add("LogOut");
             leftArrayAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, leftDataSet);
-            myLeftDrawer.Adapter = leftArrayAdapter;
-            
+            myLeftDrawer.Adapter = leftArrayAdapter;           
             myLeftDrawer.ItemClick += MyLeftDrawer_ItemClick;
-
             myDrawerToggle = new MyActionBarDrawerToggle(
                 this,
                 myDrawerLayout,
@@ -72,6 +76,15 @@ namespace volks.volksActivities
                     Intent MyConfigurator = new Intent(this, typeof(Configurator_Activity));
                     StartActivity(MyConfigurator);
                     break;
+                case 3:
+                    auth.SignOut();
+                    if (auth.CurrentUser == null)
+                    {
+                        Intent LogOut = new Intent(this, typeof(MainActivity));
+                        StartActivity(LogOut);
+                        Finish();
+                    }                    
+                    break;
             }
             //throw new System.NotImplementedException();
         }
@@ -86,5 +99,6 @@ namespace volks.volksActivities
             base.OnConfigurationChanged(newConfig);
             myDrawerToggle.OnConfigurationChanged(newConfig);
         }
+       
     }
 }

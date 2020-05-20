@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
-	xmlns:tools="http://schemas.android.com/tools"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	android:orientation="vertical"
-	android:id="@+id/activity_main"
-	>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:id="@+id/activity_changePass">
 	<RelativeLayout
 		android:minWidth="25px"
 		android:minHeight="25px"
 		android:layout_width="match_parent"
 		android:layout_height="100dp"
-		android:id="@+id/relativeLayout1"
+		android:id="@+id/signUp_Image_Relative"
 		android:background="@color/carlog_back"
 		
 		>
@@ -31,66 +27,46 @@
 		<RelativeLayout
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
-			android:layout_below="@id/relativeLayout1"
+			android:layout_below="@id/signUp_Image_Relative"
 			android:id="@+id/touch_interceptor"
 			android:descendantFocusability="beforeDescendants"
 			android:focusableInTouchMode="true">
 			<EditText
 				android:layout_width="200dp"
 				android:layout_height="wrap_content"
-				android:id="@+id/Username_zone"
-				android:hint="Username"
+				android:id="@+id/current_email"
+				android:hint="enter e-mail"
+				android:inputType="textCapWords"
 				android:layout_marginTop="170dp"				
 				android:layout_centerHorizontal="true"
-				android:maxLines="1"				
+				android:maxLines="1"	
 				android:singleLine="True"
 				android:background="@drawable/edittextborder"
-	/>
-			<EditText
-				android:layout_width="200dp"
-				android:layout_height="wrap_content"
-				android:id="@+id/Password_zone"
-				android:hint="Password"
-				android:inputType="textPassword"
-				android:layout_centerHorizontal="true"
-				android:layout_below="@id/Username_zone"
-				android:background="@drawable/edittextborder"
-		
-	/>
+	/>				
 			<Button
-				android:text="log in"
+				android:text="Change"
 				android:layout_width="200dp"
 				android:layout_height="30dp"
 				android:layout_centerHorizontal="true"
-				android:id="@+id/Login_button"
+				android:id="@+id/Change_password_button"
 				android:layout_marginTop="10dp"
-				android:layout_below="@id/Password_zone"
+				android:layout_below="@id/current_email"
 				android:textColor="#ffffff"
 				android:background="@drawable/buttonStyleYellow"
 				android:clickable="@bool/abc_action_bar_embed_tabs"
-	/>
+	/>			
 			<Button
-				android:text="create accaunt"
+				android:text="Back"
 				android:layout_width="200dp"
 				android:layout_height="30dp"
 				android:layout_centerHorizontal="true"
-				android:id="@+id/Sigin_button"
+				android:id="@+id/Back_button"
 				android:layout_marginTop="5dp"
-				android:layout_below="@id/Login_button"
+				android:layout_below="@id/Change_password_button"
 				android:textColor="#857566"
 				android:background="@drawable/buttonStyleDark"
 				android:clickable="@bool/abc_action_bar_embed_tabs"
-	/>
-			<TextView				
-				android:id="@+id/Forgot_Pass"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:text="Forgot your password?"
-				android:layout_centerHorizontal="true"
-				android:layout_marginTop="2dp"
-				android:layout_below="@id/Sigin_button"
-				android:textColor="#857566"
-			/>			
+	/>	
 		</RelativeLayout>
 		</ScrollView>
 </LinearLayout>
