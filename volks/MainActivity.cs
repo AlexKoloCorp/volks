@@ -43,6 +43,7 @@ namespace volks
 
             activity_main = FindViewById<LinearLayout>(Resource.Id.activity_main);
 
+
             //Timeles button
             btn_news = FindViewById<Button>(Resource.Id.Temp);
             btn_news.Click += Btn_news_Click;
