@@ -68,6 +68,7 @@ namespace volks.volksActivities
                 case 0:
                     Intent UserCabinet = new Intent(this, typeof(UserCarLog));
                     StartActivity(UserCabinet);
+                    Finish();
                     break;
                 case 1:
                     Toast.MakeText(this, "This page is already start", ToastLength.Short).Show();                    
@@ -75,6 +76,7 @@ namespace volks.volksActivities
                 case 2:
                     Intent MyConfigurator = new Intent(this, typeof(Configurator_Activity));
                     StartActivity(MyConfigurator);
+                    Finish();
                     break;
                 case 3:
                     auth.SignOut();

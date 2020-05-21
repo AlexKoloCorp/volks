@@ -6,108 +6,78 @@
 	android:layout_height="match_parent"
 	android:minWidth="25px"
 	android:minHeight="25px">
-		<RelativeLayout
-			android:minHeight="25px"
-			android:layout_width="match_parent"
-			android:layout_height="100dp"
-			android:id="@+id/User_image_bar"
-			android:background="@color/carlog_back"
-			>
-			
-			
-			<RelativeLayout
-				android:layout_width="match_parent"
-				android:layout_height="match_parent"
-				android:id="@+id/User_avatar_layout">
+	<android.support.v7.widget.Toolbar
+		android:id="@+id/toolBar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:minHeight="?attr/actionBarSize"
+		android:background="@color/carlog_back"
+		android:theme="@style/MyTheme"/>
 
-					<ImageView
-					android:src="@drawable/WolfAvatar"
-					android:layout_width="80dp"
-					android:layout_height="80dp"
-					android:scaleType="centerCrop"
-					android:layout_centerVertical="true"
-					android:id="@+id/User_Avatar_Image"
-					android:layout_marginLeft="15dp"			
-					android:clickable="true" />
-					<TextView
-					android:text="User Info"
-					android:textColor="#C4C4C4"
-					android:textSize="15sp"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:id="@+id/User_name_info"										
-					android:layout_toEndOf="@id/User_Avatar_Image"
-					android:layout_marginLeft="15dp"
-					android:layout_centerVertical="true"
-					/>
-					<TextView
-					android:text="User nickname"
-					android:textColor="#C4C4C4"
-					android:textSize="8sp"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:id="@+id/User_nickname"
-					android:layout_toEndOf="@id/User_Avatar_Image"
-					android:layout_marginLeft="15dp"
-					android:layout_below="@id/User_name_info"
-					android:layout_marginTop="1dp"
-					/>		
-			</RelativeLayout>
-			
-		</RelativeLayout>
-		<TableLayout
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:id="@+id/Info_switch"
-		>
-			<TableRow
-				android:id="@+id/Info_Switcher_Row"
-				android:layout_width="match_parent"
-				android:layout_height="match_parent"
-				android:background="@color/carlog_back"
-				android:padding="10dp"
-				>
-				<TextView
-					android:id="@+id/Car_Info"
+	<android.support.v4.widget.DrawerLayout
+		android:id="@+id/drawer_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<!--Main content view-->
+		<RelativeLayout
+		android:id="@+id/main_content"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		>										
+			<TableLayout
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:layout_weight="1"
-					android:gravity="center"
-					android:text="MY CAR"				
-					/>
-				<TextView
-					android:id="@+id/Car_Log_User_Info"
+					android:id="@+id/Info_switch"
+			>
+				<TableRow
+					android:id="@+id/Info_Switcher_Row"
 					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:layout_weight="1"
-					android:gravity="center"
-					android:text="INFO"
-					/>
-			</TableRow>		
-		</TableLayout>
-		<RelativeLayout
-			android:layout_width="match_parent"			
-			android:layout_height="200dp"
-			android:id="@+id/Car_Img_Layout"
-			android:layout_marginTop="20dp">
-			<ImageView
-				android:src="@drawable/ArteonWhite"
-				android:layout_width="match_parent"				
-				android:layout_height="match_parent"
-				android:scaleType="centerCrop"
-				android:id="@+id/User_Car_Image"
-				/>
-		</RelativeLayout>
-		<RelativeLayout
-			android:layout_width="match_parent"			
-			android:layout_height="match_parent"
-			android:id="@+id/Car_Info_List_Container"
-			android:layout_marginTop="20dp"
-			android:background="@color/carlog_back">
-			<ListView
+					android:layout_height="match_parent"
+					android:background="@color/carlog_back"
+					android:padding="10dp"
+					>
+					<TextView
+						android:id="@+id/Car_Info"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:gravity="center"
+						android:text="MY CAR"				
+						/>
+					<TextView
+						android:id="@+id/Car_Log_User_Info"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1"
+						android:gravity="center"
+						android:text="INFO"
+						/>
+				</TableRow>		
+			</TableLayout>
+			<RelativeLayout
 				android:layout_width="match_parent"			
-				android:layout_height="match_parent"
-				android:id="@+id/Car_Info_List"
-			/>
+				android:layout_height="200dp"
+				android:id="@+id/Car_Img_Layout"
+				android:layout_marginTop="50dp">
+				<ImageView
+					android:src="@drawable/ArteonWhite"
+					android:layout_width="match_parent"				
+					android:layout_height="match_parent"
+					android:scaleType="centerCrop"
+					android:id="@+id/User_Car_Image"
+					/>
+			</RelativeLayout>
+		
 		</RelativeLayout>
+		<!--The left navigation drawer-->
+		<ListView
+			android:id="@+id/left_drawer"
+			android:layout_width="240dp"
+			android:layout_height="match_parent"
+			android:layout_gravity="start"
+			android:choiceMode="singleChoice"
+			android:divider="#818181"
+			android:dividerHeight="1dp"
+			android:background="#e3f2fd"/>
+	</android.support.v4.widget.DrawerLayout>
 </LinearLayout>

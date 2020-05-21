@@ -14,10 +14,9 @@ namespace volks.volksActivities
     public class ForgotPass : AppCompatActivity, IOnCompleteListener
     {
         private EditText exist_email;
-        private Button btn_change, btn_back;
-        private LinearLayout activity_changePass;
+        private Button btn_change, btn_back;      
 
-        FirebaseAuth auth;       
+        FirebaseAuth auth;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -44,11 +43,18 @@ namespace volks.volksActivities
 
         private void Btn_change_Click(object sender, EventArgs e)
         {
-            ChangePassword(exist_email.Text);
-            Intent changePassword = new Intent(this, typeof(MainActivity));
-            StartActivity(changePassword);
-            Finish();
-
+            User user = new User(exist_email.Text.ToString());
+            if (user.CheckInfoChangePass())
+            {
+                ChangePassword(exist_email.Text);
+                Intent changePassword = new Intent(this, typeof(MainActivity));
+                StartActivity(changePassword);
+                Finish();
+            }
+            else
+            {
+                Toast.MakeText(this, "you didn't fill all fields", ToastLength.Short).Show();
+            }
         }
 
         private void ChangePassword(string email)

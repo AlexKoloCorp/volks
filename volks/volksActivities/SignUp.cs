@@ -13,10 +13,9 @@ namespace volks.volksActivities
     public class SignUp : AppCompatActivity, IOnCompleteListener
     {
         private EditText input_email, input_password, confirm_password;
-        private Button btn_register, btn_back;
-        private LinearLayout activity_signUp;
+        private Button btn_register, btn_back;       
 
-        FirebaseAuth auth;       
+        FirebaseAuth auth;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -44,7 +43,8 @@ namespace volks.volksActivities
 
         private void Btn_register_Click(object sender, EventArgs e)
         {
-            if((input_email.Text.ToString() != null && input_password.Text.ToString() !=null && confirm_password.Text.ToString() != null) &&(input_password.Text.ToString() == confirm_password.Text.ToString()))
+            User user = new User(input_email.Text.ToString(), input_password.Text.ToString(), confirm_password.Text.ToString());
+            if (user.CheckInfoSignUp() && (input_password.Text.ToString() == confirm_password.Text.ToString()))
             {
                 SignUpUser(input_email.Text, input_password.Text);
                 StartActivity(new Android.Content.Intent(this, typeof(MainActivity)));
@@ -53,8 +53,8 @@ namespace volks.volksActivities
             else if (!(input_password.Text.ToString() == confirm_password.Text.ToString()))
             {
                 Toast.MakeText(this, "passwords are not equal ", ToastLength.Short).Show();
-            }
-            else if(input_email.Text.ToString() == null || input_password.Text.ToString() == null || confirm_password.Text.ToString() == null)
+            }     
+            else if(!(user.CheckInfoSignUp()))
             {
                 Toast.MakeText(this, "you didn't fill all fields", ToastLength.Short).Show();
             }
