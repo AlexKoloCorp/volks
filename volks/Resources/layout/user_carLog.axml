@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
 	android:orientation="vertical"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
@@ -23,17 +24,54 @@
 		android:id="@+id/main_content"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-		>										
+		>
+			<RelativeLayout
+			android:id="@+id/user_avatar"
+			android:layout_width="match_parent"
+			android:layout_height="100dp"
+			android:background="#bdbdbd">
+				<refractored.controls.CircleImageView
+				android:src="@drawable/ArteonWhite"
+				android:layout_width="80dp"				
+				android:layout_height="80dp"					
+				android:id="@+id/User_avatar_Image"
+				android:layout_centerVertical="true"
+				android:layout_marginLeft="20dp"
+				app:civ_border_width="2dp"
+				app:civ_border_color="#ffffff"/>
+				<TextView
+					android:id="@+id/Username"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Username"
+					android:textSize="20sp"
+					android:layout_centerVertical="true"
+					android:layout_marginLeft="10dp"
+					android:layout_toEndOf="@id/User_avatar_Image"					
+				/>
+				<TextView
+					android:id="@+id/Ueser_email"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="posht@gmail.com"
+					android:textSize="12sp"
+					android:layout_centerVertical="true"
+					android:layout_marginLeft="10dp"
+					android:layout_toEndOf="@id/User_avatar_Image"	
+					android:layout_below="@id/Username"
+				/>
+			</RelativeLayout>
 			<TableLayout
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:id="@+id/Info_switch"
+					android:layout_below="@id/user_avatar"
 			>
 				<TableRow
 					android:id="@+id/Info_Switcher_Row"
 					android:layout_width="match_parent"
 					android:layout_height="match_parent"
-					android:background="@color/carlog_back"
+					android:background="#bdbdbd"
 					android:padding="10dp"
 					>
 					<TextView
@@ -58,7 +96,8 @@
 				android:layout_width="match_parent"			
 				android:layout_height="200dp"
 				android:id="@+id/Car_Img_Layout"
-				android:layout_marginTop="50dp">
+				android:layout_marginTop="20dp"
+				android:layout_below="@id/Info_switch">
 				<ImageView
 					android:src="@drawable/ArteonWhite"
 					android:layout_width="match_parent"				
@@ -76,8 +115,6 @@
 			android:layout_height="match_parent"
 			android:layout_gravity="start"
 			android:choiceMode="singleChoice"
-			android:divider="#818181"
-			android:dividerHeight="1dp"
-			android:background="#e3f2fd"/>
+			android:background="#bdbdbd"/>
 	</android.support.v4.widget.DrawerLayout>
 </LinearLayout>
