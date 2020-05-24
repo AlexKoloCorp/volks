@@ -62,6 +62,8 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapters\CarInfoAdapter.cs" />
+    <Compile Include="Adapters\Data.cs" />
     <Compile Include="model\MyActionBarDrawerToggle.cs" />
     <Compile Include="volksActivities\Configurator_Activity.cs" />
     <Compile Include="volksActivities\ForgotPass.cs" />
@@ -182,6 +184,11 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\avatar_circle_style.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\car_info_layout.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

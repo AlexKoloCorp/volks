@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 using Android.App;
 using Android.Content;
@@ -6,9 +7,11 @@ using Android.Content.Res;
 using Android.OS;
 using Android.Support.V4.Widget;
 using Android.Support.V7.App;
+using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
 using Firebase.Auth;
+using volks.Adapters;
 using volks.model;
 using SupportToolbar = Android.Support.V7.Widget.Toolbar;
 
@@ -24,6 +27,11 @@ namespace volks.volksActivities
         private ArrayAdapter leftArrayAdapter;
         private List<string> leftDataSet;
 
+        private RecyclerView my_car_list;
+        private CarInfoAdapter adapter;
+        private RecyclerView.LayoutManager layoutManager;
+        private List<Data> lstData = new List<Data>();
+
         FirebaseAuth auth;
         protected override void OnCreate(Bundle savedInstanceState)
         {        
@@ -33,6 +41,16 @@ namespace volks.volksActivities
             myLeftDrawer = FindViewById<ListView>(Resource.Id.left_drawer);
             myToolBar = FindViewById<SupportToolbar>(Resource.Id.toolBar);
             SetSupportActionBar(myToolBar);
+
+            //action with lists
+            my_car_list = FindViewById<RecyclerView>(Resource.Id.Car_list);
+            //my_car_list.HasFixedSize = true;
+            layoutManager = new LinearLayoutManager(this);
+            my_car_list.SetLayoutManager(layoutManager);
+            adapter = new CarInfoAdapter(lstData);
+            my_car_list.SetAdapter(adapter);
+
+            initData();
 
             //init Firebase
             auth = FirebaseAuth.GetInstance(MainActivity.app);
@@ -59,6 +77,13 @@ namespace volks.volksActivities
             SupportActionBar.SetDisplayShowTitleEnabled(false);
             myDrawerToggle.SyncState();
         }
+
+        private void initData()
+        {
+            lstData.Add(new Data() { text_title = "Date of purchase", text_data_from_db = "24.05.2020" });
+            lstData.Add(new Data() { text_title = "Warranty period", text_data_from_db = "3 years" });
+        }
+
         private void MyLeftDrawer_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             int menuItemSwitcher = e.Position;

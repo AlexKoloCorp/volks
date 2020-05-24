@@ -4,6 +4,7 @@ using Android.Content;
 using Android.Gms.Tasks;
 using Android.OS;
 using Android.Support.V7.App;
+using Android.Support.V7.Widget;
 using Android.Widget;
 using Firebase.Auth;
 
@@ -13,7 +14,8 @@ namespace volks.volksActivities
     public class SignUp : AppCompatActivity, IOnCompleteListener
     {
         private EditText input_email, input_password, confirm_password;
-        private Button btn_register, btn_back;       
+        private Button btn_register, btn_back;
+       
 
         FirebaseAuth auth;
 
@@ -28,8 +30,8 @@ namespace volks.volksActivities
             btn_back = FindViewById<Button>(Resource.Id.Back_button);
             btn_back.Click += Btn_back_Click;
             btn_register = FindViewById<Button>(Resource.Id.Register_button);
+            btn_register.Click += Btn_register_Click;        
 
-            btn_register.Click += Btn_register_Click;
             //init Firebase
             auth = FirebaseAuth.GetInstance(MainActivity.app);
 
