@@ -17,7 +17,7 @@ namespace volks
         private EditText username, password;      
         private Button btn_logIn, btn_sigIn;
         private TextView forgot_pass;
-        private LinearLayout activity_main;
+        private LinearLayout activity_main;        
 
         public static FirebaseApp app;
         FirebaseAuth auth;
@@ -42,11 +42,12 @@ namespace volks
             forgot_pass = FindViewById<TextView>(Resource.Id.Forgot_Pass);
             forgot_pass.Click += Forgot_pass_Click;
 
-            activity_main = FindViewById<LinearLayout>(Resource.Id.activity_main);          
+            activity_main = FindViewById<LinearLayout>(Resource.Id.activity_main);
+            
 
             //init firebase
             InitFirebaseAuth();
-        }
+        }        
 
         private void Forgot_pass_Click(object sender, EventArgs e)
         {
@@ -65,6 +66,7 @@ namespace volks
             var options = new FirebaseOptions.Builder()
                 .SetApplicationId("1:483659150895:android:26fb0ce4899d33a115f8da")
                 .SetApiKey("AIzaSyCSdWggkeyxjQxstcABdc90_hQlV_uVWr0")
+                .SetStorageBucket("volkswagen-acf75.appspot.com")
                 .Build();
             if (app == null)
                 app = FirebaseApp.InitializeApp(this, options);

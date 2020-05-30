@@ -20,18 +20,19 @@ namespace volks.volksActivities
     [Activity(Label = "UserCarLog", Theme = "@style/AppTheme.NoActionBar")]
     public class UserCarLog : AppCompatActivity
     {
+        public static readonly int PickImageId = 1000;
         private SupportToolbar myToolBar;
         private MyActionBarDrawerToggle myDrawerToggle;
         private DrawerLayout myDrawerLayout;
         private ListView myLeftDrawer;
         private ArrayAdapter leftArrayAdapter;
-        private List<string> leftDataSet;
+        private List<string> leftDataSet;      
 
         private RecyclerView my_car_list;
         private CarInfoAdapter adapter;
         private RecyclerView.LayoutManager layoutManager;
-        private List<Data> lstData = new List<Data>();
-
+        private List<Data> lstData = new List<Data>();        
+        Refractored.Controls.CircleImageView userImage;
         FirebaseAuth auth;
         protected override void OnCreate(Bundle savedInstanceState)
         {        
@@ -41,6 +42,9 @@ namespace volks.volksActivities
             myLeftDrawer = FindViewById<ListView>(Resource.Id.left_drawer);
             myToolBar = FindViewById<SupportToolbar>(Resource.Id.toolBar);
             SetSupportActionBar(myToolBar);
+
+            userImage = FindViewById<Refractored.Controls.CircleImageView>(Resource.Id.User_avatar_Image);
+            userImage.Click += UserImage_Click;
 
             //action with lists
             my_car_list = FindViewById<RecyclerView>(Resource.Id.Car_list);
@@ -78,6 +82,23 @@ namespace volks.volksActivities
             myDrawerToggle.SyncState();
         }
 
+        private void UserImage_Click(object sender, EventArgs e)
+        {
+            Intent = new Intent();
+            Intent.SetType("image/*");
+            Intent.SetAction(Intent.ActionGetContent);
+            StartActivityForResult(Intent.CreateChooser(Intent, "Select Picture"), PickImageId);
+        }
+        protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+        {
+            if ((requestCode == PickImageId) && (resultCode == Result.Ok) && (data != null))
+            {
+                Android.Net.Uri uri = data.Data;
+                userImage.SetImageURI(uri);
+            }
+        }
+
+
         private void initData()
         {
             lstData.Add(new Data() { text_title = "Date of purchase", text_data_from_db = "24.05.2020" });
@@ -91,7 +112,7 @@ namespace volks.volksActivities
             {
                 case 0:
                     Toast.MakeText(this, "This page is already start", ToastLength.Short).Show();                   
-                    Finish();
+                    
                     break;
                 case 1:
                     Intent NewsFeed = new Intent(this, typeof(NewsActivity));

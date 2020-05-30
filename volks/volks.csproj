@@ -64,6 +64,10 @@
   <ItemGroup>
     <Compile Include="Adapters\CarInfoAdapter.cs" />
     <Compile Include="Adapters\Data.cs" />
+    <Compile Include="Adapters\DrawerMenuAdapter.cs" />
+    <Compile Include="Adapters\IItemClickListener.cs" />
+    <Compile Include="Adapters\LeftMenuData.cs" />
+    <Compile Include="dataFromFirebase\ImageFromFirebase.cs" />
     <Compile Include="model\MyActionBarDrawerToggle.cs" />
     <Compile Include="volksActivities\Configurator_Activity.cs" />
     <Compile Include="volksActivities\ForgotPass.cs" />
@@ -113,6 +117,9 @@
     <PackageReference Include="Refractored.Controls.CircleImageView">
       <Version>1.0.1</Version>
     </PackageReference>
+    <PackageReference Include="Square.Picasso">
+      <Version>2.5.2.2</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
     <PackageReference Include="Xamarin.Android.Support.v4">
       <Version>27.0.2.1</Version>
@@ -121,6 +128,12 @@
       <Version>27.0.2.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Firebase.Auth">
+      <Version>60.1142.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.Database">
+      <Version>60.1142.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.Storage">
       <Version>60.1142.1</Version>
     </PackageReference>
   </ItemGroup>
@@ -159,9 +172,6 @@
     <AndroidResource Include="Resources\drawable\ArteonWhite.jpeg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\WolfAvatar.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\CorLogIco.png" />
   </ItemGroup>
   <ItemGroup>
@@ -189,6 +199,20 @@
     <AndroidResource Include="Resources\layout\car_info_layout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\left_drawer_menu_items.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ConfiguratorTile.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\porshe_white.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

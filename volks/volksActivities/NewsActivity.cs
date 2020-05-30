@@ -9,7 +9,9 @@ using Android.Views;
 using Android.Widget;
 using Firebase.Auth;
 using System.Collections.Generic;
+using volks.Adapters;
 using volks.model;
+using static Android.Views.View;
 using SupportToolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace volks.volksActivities
@@ -23,6 +25,7 @@ namespace volks.volksActivities
         private ListView myLeftDrawer;
         private ArrayAdapter leftArrayAdapter;
         private List<string> leftDataSet;
+       
 
         FirebaseAuth auth;
         protected override void OnCreate(Bundle savedInstanceState)
@@ -33,6 +36,9 @@ namespace volks.volksActivities
             myLeftDrawer = FindViewById<ListView>(Resource.Id.left_drawer);
             myToolBar = FindViewById<SupportToolbar>(Resource.Id.toolBar);
             SetSupportActionBar(myToolBar);
+
+            //image in frameLayout
+           
 
             //init Firebase
             auth = FirebaseAuth.GetInstance(MainActivity.app);
@@ -101,6 +107,6 @@ namespace volks.volksActivities
             base.OnConfigurationChanged(newConfig);
             myDrawerToggle.OnConfigurationChanged(newConfig);
         }
-       
+        
     }
 }
