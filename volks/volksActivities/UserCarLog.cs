@@ -26,7 +26,8 @@ namespace volks.volksActivities
         private DrawerLayout myDrawerLayout;
         private ListView myLeftDrawer;
         private ArrayAdapter leftArrayAdapter;
-        private List<string> leftDataSet;      
+        private List<string> leftDataSet;
+        private TextView user_email;
 
         private RecyclerView my_car_list;
         private CarInfoAdapter adapter;
@@ -38,6 +39,11 @@ namespace volks.volksActivities
         {        
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.user_carLog);
+            user_email = FindViewById<TextView>(Resource.Id.Ueser_email);
+            
+            //string to_email= Intent.GetStringExtra("username")?? "posht@gmail.com";
+            user_email.Text=Intent.GetStringExtra("key_username");
+
             myDrawerLayout = FindViewById<DrawerLayout>(Resource.Id.drawer_layout);
             myLeftDrawer = FindViewById<ListView>(Resource.Id.left_drawer);
             myToolBar = FindViewById<SupportToolbar>(Resource.Id.toolBar);
@@ -56,6 +62,8 @@ namespace volks.volksActivities
 
             initData();
 
+            
+            
             //init Firebase
             auth = FirebaseAuth.GetInstance(MainActivity.app);
 

@@ -66,6 +66,7 @@
     <Compile Include="Adapters\Data.cs" />
     <Compile Include="Adapters\DrawerMenuAdapter.cs" />
     <Compile Include="Adapters\IItemClickListener.cs" />
+    <Compile Include="Adapters\ImageAdapter.cs" />
     <Compile Include="Adapters\LeftMenuData.cs" />
     <Compile Include="dataFromFirebase\ImageFromFirebase.cs" />
     <Compile Include="model\MyActionBarDrawerToggle.cs" />
@@ -213,6 +214,24 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\porshe_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\porshe_blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\porshe_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\porshe_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\porshe_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\porshe_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\porshe_grey.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

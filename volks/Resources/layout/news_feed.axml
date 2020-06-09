@@ -19,9 +19,14 @@
 		<!--Main content view-->
 		<RelativeLayout
 		android:layout_width="match_parent"
-		android:layout_height="match_parent">
-			
-		</RelativeLayout>
+		android:layout_height="match_parent"
+			android:id="@+id/gallery_conteiner">
+			<Gallery 
+					android:id="@+id/gallery"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+				/>
+			</RelativeLayout>
 		<!--The left navigation drawer-->
 		<ListView
 			android:id="@+id/left_drawer"

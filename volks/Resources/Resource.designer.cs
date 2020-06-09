@@ -2299,26 +2299,26 @@ namespace volks
 			// aapt resource value: 0x7f020055
 			public const int avd_hide_password = 2130837589;
 			
-			// aapt resource value: 0x7f02008a
-			public const int avd_hide_password_1 = 2130837642;
+			// aapt resource value: 0x7f020090
+			public const int avd_hide_password_1 = 2130837648;
 			
-			// aapt resource value: 0x7f02008b
-			public const int avd_hide_password_2 = 2130837643;
+			// aapt resource value: 0x7f020091
+			public const int avd_hide_password_2 = 2130837649;
 			
-			// aapt resource value: 0x7f02008c
-			public const int avd_hide_password_3 = 2130837644;
+			// aapt resource value: 0x7f020092
+			public const int avd_hide_password_3 = 2130837650;
 			
 			// aapt resource value: 0x7f020056
 			public const int avd_show_password = 2130837590;
 			
-			// aapt resource value: 0x7f02008d
-			public const int avd_show_password_1 = 2130837645;
+			// aapt resource value: 0x7f020093
+			public const int avd_show_password_1 = 2130837651;
 			
-			// aapt resource value: 0x7f02008e
-			public const int avd_show_password_2 = 2130837646;
+			// aapt resource value: 0x7f020094
+			public const int avd_show_password_2 = 2130837652;
 			
-			// aapt resource value: 0x7f02008f
-			public const int avd_show_password_3 = 2130837647;
+			// aapt resource value: 0x7f020095
+			public const int avd_show_password_3 = 2130837653;
 			
 			// aapt resource value: 0x7f020057
 			public const int buttonStyleDark = 2130837591;
@@ -2452,11 +2452,11 @@ namespace volks
 			// aapt resource value: 0x7f020082
 			public const int notification_icon_background = 2130837634;
 			
-			// aapt resource value: 0x7f020088
-			public const int notification_template_icon_bg = 2130837640;
+			// aapt resource value: 0x7f02008e
+			public const int notification_template_icon_bg = 2130837646;
 			
-			// aapt resource value: 0x7f020089
-			public const int notification_template_icon_low_bg = 2130837641;
+			// aapt resource value: 0x7f02008f
+			public const int notification_template_icon_low_bg = 2130837647;
 			
 			// aapt resource value: 0x7f020083
 			public const int notification_tile_bg = 2130837635;
@@ -2465,13 +2465,31 @@ namespace volks
 			public const int notify_panel_notification_icon_bg = 2130837636;
 			
 			// aapt resource value: 0x7f020085
-			public const int porshe_white = 2130837637;
+			public const int porshe_black = 2130837637;
 			
 			// aapt resource value: 0x7f020086
-			public const int tooltip_frame_dark = 2130837638;
+			public const int porshe_blue = 2130837638;
 			
 			// aapt resource value: 0x7f020087
-			public const int tooltip_frame_light = 2130837639;
+			public const int porshe_green = 2130837639;
+			
+			// aapt resource value: 0x7f020088
+			public const int porshe_grey = 2130837640;
+			
+			// aapt resource value: 0x7f020089
+			public const int porshe_red = 2130837641;
+			
+			// aapt resource value: 0x7f02008a
+			public const int porshe_white = 2130837642;
+			
+			// aapt resource value: 0x7f02008b
+			public const int porshe_yellow = 2130837643;
+			
+			// aapt resource value: 0x7f02008c
+			public const int tooltip_frame_dark = 2130837644;
+			
+			// aapt resource value: 0x7f02008d
+			public const int tooltip_frame_light = 2130837645;
 			
 			static Drawable()
 			{
@@ -2498,17 +2516,17 @@ namespace volks
 			// aapt resource value: 0x7f0b00a0
 			public const int CarImage = 2131427488;
 			
-			// aapt resource value: 0x7f0b00e4
-			public const int Car_Img_Layout = 2131427556;
-			
-			// aapt resource value: 0x7f0b00e2
-			public const int Car_Info = 2131427554;
-			
-			// aapt resource value: 0x7f0b00e3
-			public const int Car_Log_User_Info = 2131427555;
-			
 			// aapt resource value: 0x7f0b00e6
-			public const int Car_list = 2131427558;
+			public const int Car_Img_Layout = 2131427558;
+			
+			// aapt resource value: 0x7f0b00e4
+			public const int Car_Info = 2131427556;
+			
+			// aapt resource value: 0x7f0b00e5
+			public const int Car_Log_User_Info = 2131427557;
+			
+			// aapt resource value: 0x7f0b00e8
+			public const int Car_list = 2131427560;
 			
 			// aapt resource value: 0x7f0b00c0
 			public const int Change_password_button = 2131427520;
@@ -2516,8 +2534,8 @@ namespace volks
 			// aapt resource value: 0x7f0b009f
 			public const int Configurator_Container = 2131427487;
 			
-			// aapt resource value: 0x7f0b00da
-			public const int Confirm_password_zone = 2131427546;
+			// aapt resource value: 0x7f0b00dc
+			public const int Confirm_password_zone = 2131427548;
 			
 			// aapt resource value: 0x7f0b003c
 			public const int FUNCTION = 2131427388;
@@ -2540,8 +2558,8 @@ namespace volks
 			// aapt resource value: 0x7f0b0097
 			public const int Password_zone = 2131427479;
 			
-			// aapt resource value: 0x7f0b00db
-			public const int Register_button = 2131427547;
+			// aapt resource value: 0x7f0b00dd
+			public const int Register_button = 2131427549;
 			
 			// aapt resource value: 0x7f0b003e
 			public const int SHIFT = 2131427390;
@@ -2552,23 +2570,23 @@ namespace volks
 			// aapt resource value: 0x7f0b0099
 			public const int Sigin_button = 2131427481;
 			
+			// aapt resource value: 0x7f0b00e3
+			public const int Ueser_email = 2131427555;
+			
+			// aapt resource value: 0x7f0b00e7
+			public const int User_Car_Image = 2131427559;
+			
 			// aapt resource value: 0x7f0b00e1
-			public const int Ueser_email = 2131427553;
+			public const int User_avatar_Image = 2131427553;
 			
-			// aapt resource value: 0x7f0b00e5
-			public const int User_Car_Image = 2131427557;
-			
-			// aapt resource value: 0x7f0b00df
-			public const int User_avatar_Image = 2131427551;
-			
-			// aapt resource value: 0x7f0b00e0
-			public const int Username = 2131427552;
+			// aapt resource value: 0x7f0b00e2
+			public const int Username = 2131427554;
 			
 			// aapt resource value: 0x7f0b0096
 			public const int Username_zone = 2131427478;
 			
-			// aapt resource value: 0x7f0b00c7
-			public const int action0 = 2131427527;
+			// aapt resource value: 0x7f0b00c9
+			public const int action0 = 2131427529;
 			
 			// aapt resource value: 0x7f0b0083
 			public const int action_bar = 2131427459;
@@ -2591,17 +2609,17 @@ namespace volks
 			// aapt resource value: 0x7f0b0061
 			public const int action_bar_title = 2131427425;
 			
-			// aapt resource value: 0x7f0b00c4
-			public const int action_container = 2131427524;
+			// aapt resource value: 0x7f0b00c6
+			public const int action_container = 2131427526;
 			
 			// aapt resource value: 0x7f0b0084
 			public const int action_context_bar = 2131427460;
 			
-			// aapt resource value: 0x7f0b00cb
-			public const int action_divider = 2131427531;
+			// aapt resource value: 0x7f0b00cd
+			public const int action_divider = 2131427533;
 			
-			// aapt resource value: 0x7f0b00c5
-			public const int action_image = 2131427525;
+			// aapt resource value: 0x7f0b00c7
+			public const int action_image = 2131427527;
 			
 			// aapt resource value: 0x7f0b0003
 			public const int action_menu_divider = 2131427331;
@@ -2618,11 +2636,11 @@ namespace volks
 			// aapt resource value: 0x7f0b0063
 			public const int action_mode_close_button = 2131427427;
 			
-			// aapt resource value: 0x7f0b00c6
-			public const int action_text = 2131427526;
+			// aapt resource value: 0x7f0b00c8
+			public const int action_text = 2131427528;
 			
-			// aapt resource value: 0x7f0b00d4
-			public const int actions = 2131427540;
+			// aapt resource value: 0x7f0b00d6
+			public const int actions = 2131427542;
 			
 			// aapt resource value: 0x7f0b00bd
 			public const int activity_changePass = 2131427517;
@@ -2633,8 +2651,8 @@ namespace volks
 			// aapt resource value: 0x7f0b0092
 			public const int activity_main = 2131427474;
 			
-			// aapt resource value: 0x7f0b00d7
-			public const int activity_signUp = 2131427543;
+			// aapt resource value: 0x7f0b00d9
+			public const int activity_signUp = 2131427545;
 			
 			// aapt resource value: 0x7f0b002f
 			public const int add = 2131427375;
@@ -2693,8 +2711,8 @@ namespace volks
 			// aapt resource value: 0x7f0b00a8
 			public const int c_yellow = 2131427496;
 			
-			// aapt resource value: 0x7f0b00c8
-			public const int cancel_action = 2131427528;
+			// aapt resource value: 0x7f0b00ca
+			public const int cancel_action = 2131427530;
 			
 			// aapt resource value: 0x7f0b009b
 			public const int car_title = 2131427483;
@@ -2711,8 +2729,8 @@ namespace volks
 			// aapt resource value: 0x7f0b007a
 			public const int checkbox = 2131427450;
 			
-			// aapt resource value: 0x7f0b00d0
-			public const int chronometer = 2131427536;
+			// aapt resource value: 0x7f0b00d2
+			public const int chronometer = 2131427538;
 			
 			// aapt resource value: 0x7f0b0055
 			public const int clip_horizontal = 2131427413;
@@ -2783,8 +2801,8 @@ namespace volks
 			// aapt resource value: 0x7f0b0038
 			public const int end = 2131427384;
 			
-			// aapt resource value: 0x7f0b00d6
-			public const int end_padder = 2131427542;
+			// aapt resource value: 0x7f0b00d8
+			public const int end_padder = 2131427544;
 			
 			// aapt resource value: 0x7f0b0047
 			public const int enterAlways = 2131427399;
@@ -2816,6 +2834,12 @@ namespace volks
 			// aapt resource value: 0x7f0b005f
 			public const int forever = 2131427423;
 			
+			// aapt resource value: 0x7f0b00c5
+			public const int gallery = 2131427525;
+			
+			// aapt resource value: 0x7f0b00c4
+			public const int gallery_conteiner = 2131427524;
+			
 			// aapt resource value: 0x7f0b000a
 			public const int ghost_view = 2131427338;
 			
@@ -2828,8 +2852,8 @@ namespace volks
 			// aapt resource value: 0x7f0b0069
 			public const int icon = 2131427433;
 			
-			// aapt resource value: 0x7f0b00d5
-			public const int icon_group = 2131427541;
+			// aapt resource value: 0x7f0b00d7
+			public const int icon_group = 2131427543;
 			
 			// aapt resource value: 0x7f0b0020
 			public const int icon_only = 2131427360;
@@ -2843,8 +2867,8 @@ namespace volks
 			// aapt resource value: 0x7f0b0094
 			public const int imageView1 = 2131427476;
 			
-			// aapt resource value: 0x7f0b00d1
-			public const int info = 2131427537;
+			// aapt resource value: 0x7f0b00d3
+			public const int info = 2131427539;
 			
 			// aapt resource value: 0x7f0b009c
 			public const int info_from_db = 2131427484;
@@ -2885,17 +2909,17 @@ namespace volks
 			// aapt resource value: 0x7f0b0068
 			public const int list_item = 2131427432;
 			
-			// aapt resource value: 0x7f0b00dd
-			public const int main_content = 2131427549;
+			// aapt resource value: 0x7f0b00df
+			public const int main_content = 2131427551;
 			
-			// aapt resource value: 0x7f0b00e8
-			public const int masked = 2131427560;
+			// aapt resource value: 0x7f0b00ea
+			public const int masked = 2131427562;
 			
-			// aapt resource value: 0x7f0b00ca
-			public const int media_actions = 2131427530;
+			// aapt resource value: 0x7f0b00cc
+			public const int media_actions = 2131427532;
 			
-			// aapt resource value: 0x7f0b00dc
-			public const int message = 2131427548;
+			// aapt resource value: 0x7f0b00de
+			public const int message = 2131427550;
 			
 			// aapt resource value: 0x7f0b0039
 			public const int middle = 2131427385;
@@ -2918,14 +2942,14 @@ namespace volks
 			// aapt resource value: 0x7f0b0027
 			public const int normal = 2131427367;
 			
-			// aapt resource value: 0x7f0b00d3
-			public const int notification_background = 2131427539;
+			// aapt resource value: 0x7f0b00d5
+			public const int notification_background = 2131427541;
 			
-			// aapt resource value: 0x7f0b00cd
-			public const int notification_main_column = 2131427533;
+			// aapt resource value: 0x7f0b00cf
+			public const int notification_main_column = 2131427535;
 			
-			// aapt resource value: 0x7f0b00cc
-			public const int notification_main_column_container = 2131427532;
+			// aapt resource value: 0x7f0b00ce
+			public const int notification_main_column_container = 2131427534;
 			
 			// aapt resource value: 0x7f0b0053
 			public const int parallax = 2131427411;
@@ -2948,11 +2972,11 @@ namespace volks
 			// aapt resource value: 0x7f0b007c
 			public const int radio = 2131427452;
 			
-			// aapt resource value: 0x7f0b00d8
-			public const int registerEmail = 2131427544;
+			// aapt resource value: 0x7f0b00da
+			public const int registerEmail = 2131427546;
 			
-			// aapt resource value: 0x7f0b00d9
-			public const int register_password = 2131427545;
+			// aapt resource value: 0x7f0b00db
+			public const int register_password = 2131427547;
 			
 			// aapt resource value: 0x7f0b0093
 			public const int relativeLayout1 = 2131427475;
@@ -2960,11 +2984,11 @@ namespace volks
 			// aapt resource value: 0x7f0b0051
 			public const int right = 2131427409;
 			
-			// aapt resource value: 0x7f0b00d2
-			public const int right_icon = 2131427538;
+			// aapt resource value: 0x7f0b00d4
+			public const int right_icon = 2131427540;
 			
-			// aapt resource value: 0x7f0b00ce
-			public const int right_side = 2131427534;
+			// aapt resource value: 0x7f0b00d0
+			public const int right_side = 2131427536;
 			
 			// aapt resource value: 0x7f0b000c
 			public const int save_image_matrix = 2131427340;
@@ -3080,8 +3104,8 @@ namespace volks
 			// aapt resource value: 0x7f0b0052
 			public const int start = 2131427410;
 			
-			// aapt resource value: 0x7f0b00c9
-			public const int status_bar_latest_event_content = 2131427529;
+			// aapt resource value: 0x7f0b00cb
+			public const int status_bar_latest_event_content = 2131427531;
 			
 			// aapt resource value: 0x7f0b007d
 			public const int submenuarrow = 2131427453;
@@ -3116,8 +3140,8 @@ namespace volks
 			// aapt resource value: 0x7f0b0015
 			public const int textinput_error = 2131427349;
 			
-			// aapt resource value: 0x7f0b00cf
-			public const int time = 2131427535;
+			// aapt resource value: 0x7f0b00d1
+			public const int time = 2131427537;
 			
 			// aapt resource value: 0x7f0b001c
 			public const int title = 2131427356;
@@ -3167,14 +3191,14 @@ namespace volks
 			// aapt resource value: 0x7f0b002e
 			public const int useLogo = 2131427374;
 			
-			// aapt resource value: 0x7f0b00de
-			public const int user_avatar = 2131427550;
+			// aapt resource value: 0x7f0b00e0
+			public const int user_avatar = 2131427552;
 			
 			// aapt resource value: 0x7f0b0016
 			public const int view_offset_helper = 2131427350;
 			
-			// aapt resource value: 0x7f0b00e7
-			public const int visible = 2131427559;
+			// aapt resource value: 0x7f0b00e9
+			public const int visible = 2131427561;
 			
 			// aapt resource value: 0x7f0b0022
 			public const int wide = 2131427362;

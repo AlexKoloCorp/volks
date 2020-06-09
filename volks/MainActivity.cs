@@ -99,7 +99,13 @@ namespace volks
         {
             if (task.IsSuccessful)
             {
-                StartActivity(new Android.Content.Intent(this, typeof(NewsActivity)));
+                // Говорим между какими Activity будет происходить связь
+                Intent intent = new Intent(this, typeof(UserCarLog));
+
+                // указываем первым параметром ключ, а второе значение
+                // по ключу мы будем получать значение с Intent
+                intent.PutExtra("key_username", username.Text);
+                StartActivity(intent);               
                 Finish();
             }
             else
