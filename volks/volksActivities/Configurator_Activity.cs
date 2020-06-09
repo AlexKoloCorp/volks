@@ -5,13 +5,10 @@ using Android.Content.Res;
 using Android.OS;
 using Android.Support.V4.Widget;
 using Android.Support.V7.App;
-using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Firebase.Auth;
-using Firebase.Storage;
 using Square.Picasso;
-using System;
 using System.Collections.Generic;
 using volks.model;
 using static Android.Views.View;
@@ -138,7 +135,6 @@ namespace volks.volksActivities
         public void OnClick(View v)
         {
             string imageUrl;
-            int temp = dpToPx(55);
             if (v.Id == Resource.Id.c_grey)
             {
                 imageUrl = "https://firebasestorage.googleapis.com/v0/b/volkswagen-acf75.appspot.com/o/porshe%2Fcolors%2Fporshe_grey.png?alt=media&token=2d82286b-6fa8-438f-b7cc-c0020741a30d";
@@ -175,10 +171,6 @@ namespace volks.volksActivities
                 Picasso.With(this).Load(imageUrl).Into(colorImage);
             }
 
-        }
-        public static int dpToPx(int dp)
-        {
-            return dp * (560 / 160);
-        }
+        }       
     }
 }

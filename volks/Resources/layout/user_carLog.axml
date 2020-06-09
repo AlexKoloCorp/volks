@@ -92,33 +92,14 @@
 						/>
 				</TableRow>		
 			</TableLayout>
-			<RelativeLayout
-				android:layout_width="match_parent"			
-				android:layout_height="200dp"
-				android:id="@+id/Car_Img_Layout"
-				android:layout_marginTop="20dp"
-				android:layout_below="@id/Info_switch">
-				<ImageView
-					android:src="@drawable/ArteonWhite"
-					android:layout_width="match_parent"				
-					android:layout_height="match_parent"
-					android:scaleType="centerCrop"
-					android:id="@+id/User_Car_Image"
-					/>
-			</RelativeLayout>
-			<RelativeLayout
-			android:layout_width="match_parent"				
+			<FrameLayout
+			android:id="@+id/container_fragments"
+			android:layout_width="match_parent"
 			android:layout_height="match_parent"
-			android:layout_below="@id/Car_Img_Layout"
-			android:layout_marginTop="20dp"
-			android:background="#bdbdbd"
+			android:layout_below="@id/Info_switch"
 			>
-
-			<android.support.v7.widget.RecyclerView
-				android:layout_width="match_parent"				
-				android:layout_height="match_parent"
-				android:id="@+id/Car_list"/>
-			</RelativeLayout>				
+			</FrameLayout>
+									
 		</RelativeLayout>
 		<!--The left navigation drawer-->
 		<ListView

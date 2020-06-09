@@ -62,13 +62,15 @@
     <Reference Include="Mono.Android" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapters\CarFragment.cs" />
     <Compile Include="Adapters\CarInfoAdapter.cs" />
     <Compile Include="Adapters\Data.cs" />
     <Compile Include="Adapters\DrawerMenuAdapter.cs" />
     <Compile Include="Adapters\IItemClickListener.cs" />
-    <Compile Include="Adapters\ImageAdapter.cs" />
     <Compile Include="Adapters\LeftMenuData.cs" />
-    <Compile Include="dataFromFirebase\ImageFromFirebase.cs" />
+    <Compile Include="Adapters\UserData.cs" />
+    <Compile Include="Adapters\UserFragment.cs" />
+    <Compile Include="Adapters\UserInfoAdapter.cs" />
     <Compile Include="model\MyActionBarDrawerToggle.cs" />
     <Compile Include="volksActivities\Configurator_Activity.cs" />
     <Compile Include="volksActivities\ForgotPass.cs" />
@@ -76,8 +78,6 @@
     <Compile Include="volksActivities\SignUp.cs" />
     <Compile Include="volksActivities\UserCarLog.cs" />
     <Compile Include="MainActivity.cs" />
-    <Compile Include="model\Constants.cs" />
-    <Compile Include="model\Token.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="model\User.cs" />
@@ -131,15 +131,9 @@
     <PackageReference Include="Xamarin.Firebase.Auth">
       <Version>60.1142.1</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Firebase.Database">
-      <Version>60.1142.1</Version>
-    </PackageReference>
-    <PackageReference Include="Xamarin.Firebase.Storage">
-      <Version>60.1142.1</Version>
-    </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Data\" />
+    <AndroidResource Include="Resources\drawable\porshe_white.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\CarlogFinal.png" />
@@ -173,9 +167,6 @@
     <AndroidResource Include="Resources\drawable\ArteonWhite.jpeg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\CorLogIco.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\layout\configurator_layout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -191,12 +182,6 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Matovoe.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\avatar_circle_style.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\layout\car_info_layout.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
@@ -207,31 +192,19 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_exit.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\ConfiguratorTile.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\porshe_white.png" />
+    <AndroidResource Include="Resources\layout\CarFragment.axml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\porshe_blue.png" />
+    <AndroidResource Include="Resources\layout\user_info_layout.axml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\porshe_green.png" />
+    <AndroidResource Include="Resources\layout\UserFragment.axml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\porshe_red.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\porshe_yellow.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\porshe_black.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\porshe_grey.png" />
+    <AndroidResource Include="Resources\drawable\ic_exit.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

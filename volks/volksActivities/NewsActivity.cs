@@ -9,9 +9,7 @@ using Android.Views;
 using Android.Widget;
 using Firebase.Auth;
 using System.Collections.Generic;
-using volks.Adapters;
 using volks.model;
-using static Android.Views.View;
 using SupportToolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace volks.volksActivities
@@ -37,15 +35,7 @@ namespace volks.volksActivities
             myToolBar = FindViewById<SupportToolbar>(Resource.Id.toolBar);
             SetSupportActionBar(myToolBar);
 
-            //image galary
-            Gallery gallery = (Gallery)FindViewById<Gallery>(Resource.Id.gallery);
-
-            gallery.Adapter = new ImageAdapter(this);
-
-            gallery.ItemClick += delegate (object sender, Android.Widget.AdapterView.ItemClickEventArgs args) {
-                Toast.MakeText(this, args.Position.ToString(), ToastLength.Short).Show();
-            };
-            //end
+            
 
             //init Firebase
             auth = FirebaseAuth.GetInstance(MainActivity.app);

@@ -5,21 +5,21 @@ using Android.Widget;
 
 namespace volks.Adapters
 {
-    class CarViewHolder: RecyclerView.ViewHolder
+    class UserViewHolder : RecyclerView.ViewHolder
     {
         public TextView title_text { get; set; }
         public TextView text_from_db { get; set; }
-        public CarViewHolder(View itemView) : base(itemView)
+        public UserViewHolder(View itemView) : base(itemView)
         {
-            title_text = itemView.FindViewById<TextView>(Resource.Id.car_title);
-            text_from_db = itemView.FindViewById<TextView>(Resource.Id.info_from_db);
+            title_text = itemView.FindViewById<TextView>(Resource.Id.user_title);
+            text_from_db = itemView.FindViewById<TextView>(Resource.Id.info_from_user_db);
         }
     }
-    class CarInfoAdapter : RecyclerView.Adapter
+    class UserInfoAdapter : RecyclerView.Adapter
     {
-        public List<Data> lstData = new List<Data>();
+        public List<UserData> lstData = new List<UserData>();
 
-        public CarInfoAdapter(List<Data> lstData)
+        public UserInfoAdapter(List<UserData> lstData)
         {
             this.lstData = lstData;
         }
@@ -34,7 +34,7 @@ namespace volks.Adapters
 
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
-            CarViewHolder viewHolder = holder as CarViewHolder;
+            UserViewHolder viewHolder = holder as UserViewHolder;
             viewHolder.title_text.Text = lstData[position].text_title;
             viewHolder.text_from_db.Text = lstData[position].text_data_from_db;
         }
@@ -42,8 +42,8 @@ namespace volks.Adapters
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
             LayoutInflater inflater = LayoutInflater.From(parent.Context);
-            View itemView = inflater.Inflate(Resource.Layout.car_info_layout, parent, false);
-            return new CarViewHolder(itemView);
+            View itemView = inflater.Inflate(Resource.Layout.user_info_layout, parent, false);
+            return new UserViewHolder(itemView);
         }
     }
 }
